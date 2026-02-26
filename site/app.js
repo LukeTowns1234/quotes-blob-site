@@ -1,0 +1,1 @@
+const FUNCTION_BASE_URL = "https://lt722quotesappstore.z1.web.core.windows.net/"
