@@ -1,12 +1,20 @@
-name: Deploy site to Azure Blob Static Website
+name: Deploy site to Azure Blob Static Website 
 
-on:
-  push:
-    branches: ["main"]
-    paths:
-      -"site/**"
-      -".github/workflow/deploy-site.yml"
+  
 
+on: 
+
+  push: 
+
+    branches: [ "main" ] 
+
+    paths: 
+
+      - "site/**" 
+
+      - ".github/workflows/deploy-site.yml" 
+
+  
 
 jobs: 
 
