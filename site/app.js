@@ -1,4 +1,4 @@
-const FUNCTION_BASE_URL = "https://lt722quotesappstore.z1.web.core.windows.net/"
+const FUNCTION_BASE_URL = "https://lt722quotesapp-dacsbmetdga2cahp.germanywestcentral-01.azurewebsites.net"
 
 const btn = document.getElementById("btn"); 
 
