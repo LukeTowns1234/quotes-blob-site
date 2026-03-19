@@ -25,7 +25,7 @@ app.http("quote", {
 
             const quotes: string[] = Array.isArray(parsed?.quotes) ? parsed.quotes : [];
             if (quotes.length === 0) {
-                return { status: 500, jsonBody: { error: "No quotes found in quotes.json" } };
+                return { status: 500, jsonBody: { error: "No quotes were found in quotes.json" } };
             }
             const quote = quotes[Math.floor(Math.random() * quotes.length)];
 
