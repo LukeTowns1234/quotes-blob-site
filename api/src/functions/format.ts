@@ -45,7 +45,7 @@ export async function format(request: HttpRequest, context: InvocationContext): 
 
     const formatter = FORMATTERS[action];
     if (!formatter) {
-      return { status: 400, jsonBody: { error: "No formatter registered for this action." } };
+      return { status: 400, jsonBody: { error: "No formatter registered for this action!" } };
     }
 
     const result = formatter(text);
