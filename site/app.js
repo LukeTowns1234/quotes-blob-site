@@ -133,3 +133,5 @@ if (fileInput && btnFormat && btnCopy && formatStatusEl && outputEl) {
     formatStatusEl.textContent = "Copied output to clipboard.";
   });
 }
+
+
