@@ -4,7 +4,7 @@ export function txtcsvconver(input: string): string {
   for (let i = 0; i < chars.length; i++) {
     let c = chars[i];
 
-    if (c === "\n") {
+    if (c === "\r\n") {
       c = ",";
       continue;
     }
