@@ -1,14 +1,6 @@
 export function txtcsvconver(input: string): string {
-  let chars = input.split("");
+  const normalisedText = input.replace(/\r\n/g, "\n");
+  let chars = normalisedText.split("\n");
 
-  for (let i = 0; i < chars.length; i++) {
-    let c = chars[i];
-
-    if (c === "\r\n") {
-      c = ",";
-      continue;
-    }
-  }
-
-  return chars.join("");
+  return chars.join(",");
 }
