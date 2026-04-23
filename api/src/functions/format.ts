@@ -11,6 +11,7 @@ function detectAction(filename: string): FormatterAction | null {
   const lower = filename.toLowerCase();
   if (lower.includes("_uppercase.txt")) return "uppercase";
   if (lower.includes("_sentencecase.txt")) return "sentencecase";
+  if (lower.includes("_txtcsvconver.txt")) return "txtcsvconver";
   return null;
 }
 

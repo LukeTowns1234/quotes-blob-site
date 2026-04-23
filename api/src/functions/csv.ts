@@ -1,5 +1,5 @@
 import { app, HttpRequest, HttpResponseInit, InvocationContext } from "@azure/functions";
-import { sentencecase as toSentenceCase } from "../formatters/sentencecase";
+import { txtcsvconver as txttocsv} from "../formatters/txt-csv";
 type Body = { text?: string };
 
 /*function toSentenceCase(input: string): string {
@@ -33,7 +33,7 @@ type Body = { text?: string };
   return chars.join("");
 }*/
 
-export async function sentencecase(
+export async function txtcsvconver(
   request: HttpRequest,
   context: InvocationContext
 ): Promise<HttpResponseInit> {
@@ -50,16 +50,16 @@ export async function sentencecase(
       return { status: 413, jsonBody: { error: "Text too large for this demo." } };
     }
 
-    const result = toSentenceCase(text);
+    const result = txttocsv(text);
     return { status: 200, jsonBody: { result } };
   } catch {
     return { status: 400, jsonBody: { error: "Invalid JSON body." } };
   }
 }
 
-app.http("sentencecase", {
+app.http("txtcsvconver", {
   methods: ["POST"],
   authLevel: "anonymous",
-  route: "sentencecase",
-  handler: sentencecase
+  route: "txtcsvconver",
+  handler: txtcsvconver
 });
